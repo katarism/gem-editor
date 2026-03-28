@@ -4,7 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Elite Network Editor</title>
-<script src="../cytoscape.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.30.2/cytoscape.min.js" crossorigin="anonymous"></script>
+<script>
+// Fallback to local copy if CDN fails (e.g. offline development)
+if(typeof cytoscape==='undefined'){
+  var s=document.createElement('script');
+  s.src='../cytoscape.min.js';
+  document.head.appendChild(s);
+}
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
